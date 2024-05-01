@@ -16,7 +16,7 @@ const uploadMiddleware = multer({ dest: 'uploads/' })
 const PORT = 8000;
 
 mongoose.connect('mongodb+srv://ksharma1342000:raKTm4WLujOKNdmb@cluster0.hk3vxcu.mongodb.net/')
-app.use(cors({credentials:true , origin:'http://localhost:5173'}));
+app.use(cors({credentials:true , origin:['http://localhost:5173',"https://mern-blog-app.onrender.com"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname + '/uploads'));
