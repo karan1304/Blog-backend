@@ -16,7 +16,7 @@ const uploadMiddleware = multer({ dest: 'uploads/' })
 const PORT = 8000;
 
 mongoose.connect('mongodb+srv://ksharma1342000:raKTm4WLujOKNdmb@cluster0.hk3vxcu.mongodb.net/')
-app.use(cors({credentials:true , origin:'https://melodic-sprite-6d35bf.netlify.app'}));
+app.use(cors({credentials:true , origin:'http://localhost:5173'}));
 app.use((req,res,next)=>{
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control-Allow-Methods","GET , POST , PUT , PATCH , DELETE");
